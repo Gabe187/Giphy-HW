@@ -1,0 +1,111 @@
+<!--
+
+PSUEDO CODE
+- Create starting list of "topics" in an array (doesn't have to be animals)
+- Render the array as individual buttons 
+
+- When user clicks a button, render 10 gifs (NON-ANIMATED) for that specific topic
+- When user clicks on a non-animated GIF, gif should begin animating.  When they click on it again, it should stop.
+- Include the rating of the GIF below the image.
+
+- Add a form for user to input their own "topic"
+- Once they submit, render the new topic as an additional new button
+
+-->
+
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+
+	<!-- Adds the icon in the browser title -->
+	<link rel="icon" type="image/gif" href="http://lsvp.com/wp-content/uploads/2015/02/giphy_3.gif">
+
+	<meta charset="UTF-8">
+
+	<!--Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- BOOTSRAP, Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<title>Giphy Viewer, Wk 6</title>
+
+	<style type="text/css">
+
+	.button-view {
+		margin: 10px;
+	}
+
+	</style>
+
+</head>
+<body>
+
+<!-- Bootstrap Container will hold everything. -->
+<div class='container'>
+
+<!-- Jumbotron holds the title section. -->
+	<div class='jumbotron'>
+		<div class='container'>
+	    	<h1>SPORTS Gifs</h1>
+	    	<p>Press a button to view some fun.  Or go crazy and add your own!</p>
+	  	</div>
+	</div>
+
+	<!-- Main section that holds the interactice elements. -->
+	<div class='row'>
+	 	<div class='col-lg-12'>
+
+	    	<!-- First Panel: Holds the buttons. -->
+	    	<div class='panel panel-default'>
+
+	     		<div class='panel-heading'>
+	        		<h3 class='panel-title'><strong>Select a Button!</strong></h3>
+	        		<div id = "sport-buttons"></div>
+				</div>
+
+			</div>
+
+			<!-- Second Panel: Option to add your own buttons -->
+			<div class='panel panel-default'>
+
+				<div class='panel-body'>
+					<!-- This span is where the user can type in a new sport button to add. -->
+					<form id="sport-form">
+						<label for="sport-input">Add a new Sport</label>
+						<input type="text" id="sport-input">
+
+						<!-- Button triggers new sport to be added -->
+						<input id="add-sport" type="submit" value="Submit">
+					</form>
+
+				</div>
+
+			</div>
+
+	        <!-- Third Panel: Displays the retreived gifs. -->
+	        <div class='panel panel-default'>
+
+	         	<div class='panel-body'>
+		            <!-- This span is where I'll be rendering the 10 gifs. -->
+		            <div id = "gifs-go-here"></div>
+	         	</div>
+
+	        </div>
+
+	 	</div>
+
+	</div>
+
+</div>
+  <!--  Container Closed  -->
+
+<!--  jQuery Link  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Adds a link to the JavaScript file. -->
+<script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
