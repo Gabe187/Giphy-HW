@@ -50,7 +50,7 @@ function showGifs () {
 	var sport = $(this).attr("data-name");
 
 	// Build the Giphy URL
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=e4de09e72e0a41bcaa9f9ff663fde797&limit=10";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + sport + "&api_key=e4de09e72e0a41bcaa9f9ff663fde797&limit=10";
 
         // Creating an AJAX call for the specific movie button being clicked
 	$.ajax({
